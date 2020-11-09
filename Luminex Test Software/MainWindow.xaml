@@ -5,8 +5,81 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Luminex_Test_Software"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Luminex 0110 Test Software" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Canvas HorizontalAlignment="Left" Height="42" Margin="71,98,0,0" VerticalAlignment="Top" Width="264" Grid.RowSpan="2">
+            <Label x:Name="label" Content="Unit Serial Number:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Canvas.Left="10" Canvas.Top="6"/>
+            <TextBox x:Name="textBoxSerialNumber" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Canvas.Left="130" Canvas.Top="10"/>
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" Height="208" Margin="71,10,0,0" VerticalAlignment="Top" Width="280" Grid.Row="1">
+            <Label x:Name="label1" Content="Cable 3000-4140" Canvas.Left="86" Canvas.Top="10" FontWeight="Bold"/>
+            <Label x:Name="label2" Content="Pin" Canvas.Left="19" Canvas.Top="38"/>
+            <Label x:Name="label3" Content="Voltage" Canvas.Left="95" Canvas.Top="38" Width="60"/>
+            <Label x:Name="label4" Content="1" Canvas.Left="19" Canvas.Top="64"/>
+            <Label x:Name="label4_Copy" Content="2" Canvas.Left="19" Canvas.Top="90"/>
+            <Label x:Name="label4_Copy1" Content="3" Canvas.Left="19" Canvas.Top="116"/>
+            <Label x:Name="label4_Copy2" Content="4" Canvas.Left="19" Canvas.Top="142"/>
+            <Label x:Name="label4_Copy3" Content="5" Canvas.Left="19" Canvas.Top="168"/>
+            <Label x:Name="label3_Copy" Content="Range" Canvas.Left="210" Canvas.Top="38" Width="60"/>
+            <Label x:Name="label5" Content="13.5 - 16.5V" Canvas.Left="197" Canvas.Top="64"/>
+            <Label x:Name="label5_Copy" Content="4.9 - 5.2V" Canvas.Left="204" Canvas.Top="142"/>
+            <Label x:Name="label5_Copy1" Content="-13.5 -  -16.5V" Canvas.Left="191" Canvas.Top="168"/>
+            <Label x:Name="label5_Copy2" Content="Ground" Canvas.Left="210" Canvas.Top="90"/>
+            <Label x:Name="label5_Copy3" Content="Ground" Canvas.Left="210" Canvas.Top="116"/>
+            <Label x:Name="_4140_1" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="64"/>
+            <Label x:Name="_4140_2" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="90"/>
+            <Label x:Name="_4140_3" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="116"/>
+            <Label x:Name="_4140_4" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="142"/>
+            <Label x:Name="_4140_5" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="168"/>
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" Height="382" Margin="441,10,0,0" VerticalAlignment="Top" Width="280" Grid.RowSpan="2">
+            <Label x:Name="label6" Content="Cable 3000-4130" Canvas.Left="86" Canvas.Top="10" FontWeight="Bold"/>
+            <Label x:Name="label7" Content="Pin" Canvas.Left="19" Canvas.Top="38"/>
+            <Label x:Name="label8" Content="Voltage" Canvas.Left="95" Canvas.Top="38" Width="60"/>
+            <Label x:Name="label9" Content="1" Canvas.Left="19" Canvas.Top="64"/>
+            <Label x:Name="label4_Copy4" Content="2" Canvas.Left="19" Canvas.Top="90"/>
+            <Label x:Name="label4_Copy5" Content="3" Canvas.Left="19" Canvas.Top="116"/>
+            <Label x:Name="label4_Copy6" Content="4" Canvas.Left="19" Canvas.Top="142"/>
+            <Label x:Name="label4_Copy7" Content="5" Canvas.Left="19" Canvas.Top="168"/>
+            <Label x:Name="label3_Copy1" Content="Range" Canvas.Left="210" Canvas.Top="38" Width="60"/>
+            <Label x:Name="label10" Content="Ground" Canvas.Left="210" Canvas.Top="64"/>
+            <Label x:Name="label5_Copy4" Content="Ground" Canvas.Left="210" Canvas.Top="142"/>
+            <Label x:Name="label5_Copy5" Content="Ground" Canvas.Left="210" Canvas.Top="168"/>
+            <Label x:Name="label5_Copy6" Content="Ground" Canvas.Left="210" Canvas.Top="90"/>
+            <Label x:Name="label5_Copy7" Content="Ground" Canvas.Left="210" Canvas.Top="116"/>
+            <Label x:Name="_4130_1" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="64"/>
+            <Label x:Name="_4130_2" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="90"/>
+            <Label x:Name="_4130_3" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="116"/>
+            <Label x:Name="_4130_4" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="142"/>
+            <Label x:Name="_4130_5" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="168"/>
+            <Label x:Name="label4_Copy8" Content="6" Canvas.Left="19" Canvas.Top="194"/>
+            <Label x:Name="label5_Copy8" Content="NOT CONNECTED" Canvas.Left="126" Canvas.Top="194"/>
+            <Label x:Name="label4_Copy9" Content="7" Canvas.Left="19" Canvas.Top="220"/>
+            <Label x:Name="label5_Copy9" Content="10.8 - 13.2V" Canvas.Left="197" Canvas.Top="220"/>
+            <Label x:Name="_4130_7" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="220"/>
+            <Label x:Name="label4_Copy10" Content="8" Canvas.Left="19" Canvas.Top="246"/>
+            <Label x:Name="label5_Copy10" Content="10.8 - 13.2V" Canvas.Left="197" Canvas.Top="246"/>
+            <Label x:Name="_4130_8" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="246"/>
+            <Label x:Name="label4_Copy11" Content="9" Canvas.Left="19" Canvas.Top="272"/>
+            <Label x:Name="label5_Copy11" Content="4.9 - 5.2V" Canvas.Left="200" Canvas.Top="272"/>
+            <Label x:Name="_4130_9" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="272"/>
+            <Label x:Name="label4_Copy12" Content="10" Canvas.Left="19" Canvas.Top="298"/>
+            <Label x:Name="label5_Copy12" Content="4.9 - 5.2V" Canvas.Left="200" Canvas.Top="298"/>
+            <Label x:Name="_4130_10" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="298"/>
+            <Label x:Name="label4_Copy13" Content="11" Canvas.Left="19" Canvas.Top="324"/>
+            <Label x:Name="label5_Copy13" Content="4.9 - 5.2V" Canvas.Left="200" Canvas.Top="324"/>
+            <Label x:Name="_4130_11" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="324"/>
+            <Label x:Name="label4_Copy14" Content="12" Canvas.Left="19" Canvas.Top="350"/>
+            <Label x:Name="label5_Copy14" Content="4.9 - 5.2V" Canvas.Left="200" Canvas.Top="350"/>
+            <Label x:Name="_4130_12" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="104" Canvas.Top="350"/>
+        </Canvas>
+        <Button x:Name="button_ReadVoltage" Content="Test Voltage" HorizontalAlignment="Left" Margin="87,71,0,0" VerticalAlignment="Top" Width="125" IsEnabled="False" Click="Button_ReadVoltage_Click"/>
+        <Button x:Name="button_Save" Content="Save" HorizontalAlignment="Left" Margin="245,71,0,0" VerticalAlignment="Top" Width="75" Click="Button_Save_Click"/>
+        <Label x:Name="label_Connection" Content="Disconnected" HorizontalAlignment="Left" Margin="132,20,0,0" VerticalAlignment="Top" Width="153" FontWeight="Bold" FontSize="20"/>
+
     </Grid>
 </Window>
