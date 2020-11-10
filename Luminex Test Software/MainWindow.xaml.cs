@@ -25,7 +25,8 @@ namespace Luminex_Test_Software
         private Dictionary<string, Label> labelDict;
         private readonly SerialController port;
         private readonly LuminexUnit sut; // System Under Test
-        private readonly DocumentCreator documentCreator;
+        //private readonly DocumentCreator documentCreator;
+        private readonly PDFCreator pdfCreator; // machines without Microsoft Word installed cannot use DocumentCreator
 
         public MainWindow()
         {
@@ -33,7 +34,8 @@ namespace Luminex_Test_Software
             InitLabelDict();
             port = new SerialController();
             sut = new LuminexUnit();
-            documentCreator = new DocumentCreator();
+            //documentCreator = new DocumentCreator();
+            pdfCreator = new PDFCreator();
 
             port.voltageDataDelegateCallback = VoltageDataReceived_Event;
             port.voltageReadStartedDelegateCallback = VoltageDataStarted_Event;
@@ -41,7 +43,8 @@ namespace Luminex_Test_Software
             port.serialConnectedDelegateCallback = SerialConnected_Event;
             port.serialDisconnectedDelegateCallback = SerialDisconnected_Event;
 
-            documentCreator.documentSavedDelegateCallback = DocumentSaveComplete_Event;
+            //documentCreator.documentSavedDelegateCallback = DocumentSaveComplete_Event;
+            pdfCreator.pdfSaveCompleteDelegate = DocumentSaveComplete_Event;
         }
 
         private void InitLabelDict()
@@ -135,13 +138,14 @@ namespace Luminex_Test_Software
 
         private void Button_Save_Click(object sender, RoutedEventArgs e)
         {
-            //new DocumentCreator().TestDocument();
+            //new PDFCreator().SaveToPDF();
             if (textBoxSerialNumber.Text.Equals(""))
             {
                 MessageBox.Show("Enter Serial Number");
                 return;
             }
-            documentCreator.SaveResultsToFile(textBoxSerialNumber.Text, sut.pinDictionary);
+            pdfCreator.SaveToPDF(textBoxSerialNumber.Text, sut.pinDictionary);
+            //documentCreator.SaveResultsToFile(textBoxSerialNumber.Text, sut.pinDictionary);
 
         }
 
